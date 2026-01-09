@@ -6,30 +6,23 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EDA9E0E92F1162DA00A95439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA9E0E22F1162DA00A95439 /* Assets.xcassets */; };
+		EDA9E0EB2F1162DA00A95439 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA9E0E52F1162DA00A95439 /* LaunchScreen.storyboard */; };
+		EDA9E0EC2F1162DA00A95439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9E0E12F1162DA00A95439 /* AppDelegate.swift */; };
+		EDA9E0ED2F1162DA00A95439 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9E0E62F1162DA00A95439 /* SceneDelegate.swift */; };
+		EDA9E0EE2F1162DA00A95439 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9E0E72F1162DA00A95439 /* ViewController.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		EDA9E0C92F1161DB00A95439 /* TrackIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDA9E0E12F1162DA00A95439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDA9E0E22F1162DA00A95439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDA9E0E32F1162DA00A95439 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDA9E0E42F1162DA00A95439 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EDA9E0E62F1162DA00A95439 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EDA9E0E72F1162DA00A95439 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		EDA9E0DB2F1161DC00A95439 /* Exceptions for "TrackIt" folder in "TrackIt" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = EDA9E0C82F1161DB00A95439 /* TrackIt */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		EDA9E0CB2F1161DB00A95439 /* TrackIt */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				EDA9E0DB2F1161DC00A95439 /* Exceptions for "TrackIt" folder in "TrackIt" target */,
-			);
-			path = TrackIt;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EDA9E0C62F1161DB00A95439 /* Frameworks */ = {
@@ -45,7 +38,7 @@
 		EDA9E0C02F1161DB00A95439 = {
 			isa = PBXGroup;
 			children = (
-				EDA9E0CB2F1161DB00A95439 /* TrackIt */,
+				EDA9E0E82F1162DA00A95439 /* TrackIt */,
 				EDA9E0CA2F1161DB00A95439 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +49,67 @@
 				EDA9E0C92F1161DB00A95439 /* TrackIt.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EDA9E0E82F1162DA00A95439 /* TrackIt */ = {
+			isa = PBXGroup;
+			children = (
+				EDA9E0F32F11636D00A95439 /* Resources */,
+				EDA9E0F12F11635200A95439 /* Modules */,
+				EDA9E0F02F11634D00A95439 /* Sources */,
+				EDA9E0EF2F11634900A95439 /* App */,
+				EDA9E0E32F1162DA00A95439 /* Info.plist */,
+				EDA9E0E72F1162DA00A95439 /* ViewController.swift */,
+			);
+			path = TrackIt;
+			sourceTree = "<group>";
+		};
+		EDA9E0EF2F11634900A95439 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EDA9E0E62F1162DA00A95439 /* SceneDelegate.swift */,
+				EDA9E0E12F1162DA00A95439 /* AppDelegate.swift */,
+				EDA9E0F22F11635900A95439 /* Coordinators */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EDA9E0F02F11634D00A95439 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		EDA9E0F12F11635200A95439 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		EDA9E0F22F11635900A95439 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		EDA9E0F32F11636D00A95439 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EDA9E0F42F11637700A95439 /* Fonts */,
+				EDA9E0E22F1162DA00A95439 /* Assets.xcassets */,
+				EDA9E0E52F1162DA00A95439 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EDA9E0F42F11637700A95439 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +126,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				EDA9E0CB2F1161DB00A95439 /* TrackIt */,
 			);
 			name = TrackIt;
 			packageProductDependencies = (
@@ -122,6 +173,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDA9E0E92F1162DA00A95439 /* Assets.xcassets in Resources */,
+				EDA9E0EB2F1162DA00A95439 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +185,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDA9E0EC2F1162DA00A95439 /* AppDelegate.swift in Sources */,
+				EDA9E0ED2F1162DA00A95439 /* SceneDelegate.swift in Sources */,
+				EDA9E0EE2F1162DA00A95439 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EDA9E0E52F1162DA00A95439 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDA9E0E42F1162DA00A95439 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EDA9E0DD2F1161DC00A95439 /* Debug */ = {
@@ -148,11 +215,13 @@
 				DEVELOPMENT_TEAM = A673JD59FG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrackIt/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Track It!";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -161,12 +230,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = andreichenko256.TrackIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -180,11 +253,13 @@
 				DEVELOPMENT_TEAM = A673JD59FG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrackIt/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Track It!";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -193,12 +268,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = andreichenko256.TrackIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
