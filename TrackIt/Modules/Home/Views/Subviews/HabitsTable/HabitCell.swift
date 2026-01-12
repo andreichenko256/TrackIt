@@ -66,17 +66,8 @@ final class HabitCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        
         titleLabel.text = nil
-        isSelected = false
-    }
-    
-    override var isSelected: Bool {
-        didSet {
-            completeView.backgroundColor = isSelected ? Colors.primary : .clear
-            completeView.layer.borderColor = isSelected ? Colors.primary.cgColor : UIColor.systemGray.cgColor
-            checkImageView.isHidden = !isSelected
-        }
+        updateCompletionState(isCompleted: false)
     }
 }
 
@@ -84,7 +75,6 @@ private extension HabitCell {
     func setupUI() {
         backgroundColor = .clear
         selectionStyle = .none
-        
     }
     
     func setupConstraints() {
@@ -114,11 +104,17 @@ private extension HabitCell {
             $0.bottom.equalToSuperview()
         }
     }
+    
+    func updateCompletionState(isCompleted: Bool) {
+        completeView.backgroundColor = isCompleted ? Colors.primary : .clear
+        completeView.layer.borderColor = isCompleted ? Colors.primary.cgColor : UIColor.systemGray.cgColor
+        checkImageView.isHidden = !isCompleted
+    }
 }
 
 extension HabitCell {
     func configure(with habit: Habit) {
         titleLabel.text = habit.title
-        isSelected = habit.isCompleted
+        updateCompletionState(isCompleted: habit.isCompleted)
     }
 }

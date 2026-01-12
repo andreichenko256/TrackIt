@@ -12,7 +12,11 @@ final class HomeViewModel {
             Habit(title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", isCompleted: true, dateCreated: Date()),
             Habit(title: "Workout", isCompleted: false, dateCreated: Date()),
             Habit(title: "Read book", isCompleted: false, dateCreated: Calendar.current.date(byAdding: .day, value: -1, to: Date())!),
-            Habit(title: "Meditation", isCompleted: true, dateCreated: Calendar.current.date(byAdding: .day, value: -1, to: Date())!)
+            Habit(title: "Meditation", isCompleted: true, dateCreated: Calendar.current.date(byAdding: .day, value: -2, to: Date())!),
+            Habit(title: "Read book", isCompleted: false, dateCreated: Calendar.current.date(byAdding: .day, value: -1, to: Date())!),
+            Habit(title: "Meditation", isCompleted: true, dateCreated: Calendar.current.date(byAdding: .day, value: -2, to: Date())!),
+            Habit(title: "Meditation", isCompleted: true, dateCreated: Calendar.current.date(byAdding: .day, value: -3, to: Date())!),
+            Habit(title: "Meditation", isCompleted: true, dateCreated: Calendar.current.date(byAdding: .day, value: -4, to: Date())!)
         ]
         groupHabits()
     }

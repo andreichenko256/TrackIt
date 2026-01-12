@@ -57,13 +57,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return headerView
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.toggleHabit(at: indexPath)
-    }
+         tableView.deselectRow(at: indexPath, animated: false)
+         
+         viewModel.toggleHabit(at: indexPath)
+         
+         tableView.reloadRows(at: [indexPath], with: .none)
+     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         viewModel.toggleHabit(at: indexPath)

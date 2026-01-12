@@ -21,6 +21,7 @@
 		ED7970902F158FB9006AFEE5 /* HabitsTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED79708F2F158FB3006AFEE5 /* HabitsTableHeaderView.swift */; };
 		ED7970922F15918C006AFEE5 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7970912F159189006AFEE5 /* CustomNavigationBar.swift */; };
 		ED7970952F159202006AFEE5 /* EditMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7970942F159201006AFEE5 /* EditMenu.swift */; };
+		ED7970982F1595A0006AFEE5 /* PaywallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7970972F15959C006AFEE5 /* PaywallVC.swift */; };
 		EDA9E0E92F1162DA00A95439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA9E0E22F1162DA00A95439 /* Assets.xcassets */; };
 		EDA9E0EB2F1162DA00A95439 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA9E0E52F1162DA00A95439 /* LaunchScreen.storyboard */; };
 		EDA9E0EC2F1162DA00A95439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9E0E12F1162DA00A95439 /* AppDelegate.swift */; };
@@ -46,6 +47,7 @@
 		ED79708F2F158FB3006AFEE5 /* HabitsTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsTableHeaderView.swift; sourceTree = "<group>"; };
 		ED7970912F159189006AFEE5 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		ED7970942F159201006AFEE5 /* EditMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMenu.swift; sourceTree = "<group>"; };
+		ED7970972F15959C006AFEE5 /* PaywallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallVC.swift; sourceTree = "<group>"; };
 		EDA9E0C92F1161DB00A95439 /* TrackIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA9E0E12F1162DA00A95439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDA9E0E22F1162DA00A95439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,6 +168,22 @@
 			path = CustomNavigationBar;
 			sourceTree = "<group>";
 		};
+		ED7970962F159597006AFEE5 /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				ED7970992F1595A2006AFEE5 /* Views */,
+				ED7970972F15959C006AFEE5 /* PaywallVC.swift */,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
+		ED7970992F1595A2006AFEE5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EDA9E0C02F1161DB00A95439 = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +236,7 @@
 		EDA9E0F12F11635200A95439 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				ED7970962F159597006AFEE5 /* Paywall */,
 				ED79706F2F1508DA006AFEE5 /* Home */,
 				EDA9E0F52F1165DB00A95439 /* Launch */,
 			);
@@ -348,6 +367,7 @@
 				ED7970872F15822E006AFEE5 /* HabitsTableView.swift in Sources */,
 				ED79708E2F1583D0006AFEE5 /* HomeViewModel.swift in Sources */,
 				ED79707B2F157DEE006AFEE5 /* Colors.swift in Sources */,
+				ED7970982F1595A0006AFEE5 /* PaywallVC.swift in Sources */,
 				ED7970812F1580AD006AFEE5 /* UIView.swift in Sources */,
 				ED7970892F15829F006AFEE5 /* HabitCell.swift in Sources */,
 				ED7970712F1508E0006AFEE5 /* HomeVC.swift in Sources */,

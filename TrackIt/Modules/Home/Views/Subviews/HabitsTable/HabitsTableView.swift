@@ -20,7 +20,6 @@ private extension HabitsTableView {
         layer.cornerRadius = 16
         separatorStyle = .none
         allowsSelection = true
-        allowsMultipleSelection = true
     }
     
     func registerCells() {
