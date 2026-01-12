@@ -6,6 +6,16 @@ final class HomeViewModel {
     @Published private(set) var groupedHabits: [Date: [Habit]] = [:]
     @Published private(set) var sortedDates: [Date] = []
     
+    var numberOfHabits: Int {
+        habits.count
+    }
+
+    var numberOfHabitsPublisher: AnyPublisher<Bool, Never> {
+        $habits
+            .map { $0.count > 0 }
+            .eraseToAnyPublisher()
+    }
+    
     private let coreDataManager = CoreDataManager.shared
     
     func loadHabits() {

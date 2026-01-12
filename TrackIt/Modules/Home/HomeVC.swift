@@ -117,6 +117,13 @@ private extension HomeViewController {
                 }
             }
             .store(in: &cancellables)
+        
+        viewModel.numberOfHabitsPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] isEmpty in
+                self?.homeView.noHabbitsLabel.isHidden = isEmpty
+            }
+            .store(in: &cancellables)
     }
     
     func setupActions() {

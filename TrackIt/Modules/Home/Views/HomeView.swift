@@ -6,6 +6,16 @@ final class HomeView: UIView {
     let habbitsTableView = HabitsTableView()
     let customNavigationBar = CustomNavigationBar()
     
+    lazy var noHabbitsLabel = {
+        $0.text = "No habbits yet.\n\nTap 'Add Habbit' to create one!"
+        $0.font = .systemFont(ofSize: 24, weight: .bold)
+        $0.textColor = Colors.primary
+        $0.textAlignment = .center
+        $0.numberOfLines = 0
+        $0.isHidden = true
+        return $0
+    }(UILabel())
+    
     private lazy var gradientLayer = {
         $0.colors = Colors.Gradients.primaryBg
         $0.startPoint = CGPoint(x: 0.5, y: 0.0)
@@ -48,6 +58,12 @@ private extension HomeView {
             $0.top.equalTo(customNavigationBar.snp.bottom).offset(24)
             $0.horizontalEdges.equalToSuperview().inset(16)
             $0.bottom.equalTo(addHabbitButton.snp.top).offset(-16)
+        }
+        
+        habbitsTableView.addSubview(noHabbitsLabel)
+        
+        noHabbitsLabel.snp.makeConstraints {
+            $0.center.equalToSuperview()
         }
         
         addHabbitButton.snp.makeConstraints {
