@@ -2,6 +2,7 @@ import UIKit
 import SnapKit
 
 final class CustomNavigationBar: UIView {
+    let editMenu = EditMenu()
     
     private lazy var titleLabel = {
         $0.text = "Track It!"
@@ -24,17 +25,21 @@ final class CustomNavigationBar: UIView {
 
 private extension CustomNavigationBar {
     func setupUI() {
-        
+        backgroundColor = .clear
     }
     
     func setupConstraints() {
-        [titleLabel].forEach {
+        [titleLabel, editMenu].forEach {
             addSubview($0)
         }
         
         titleLabel.snp.makeConstraints {
-            $0.top.equalToSuperview()
-            $0.centerX.equalToSuperview()
+            $0.center.equalToSuperview()
+        }
+        
+        editMenu.snp.makeConstraints {
+            $0.top.bottom.equalToSuperview()
+            $0.trailing.equalToSuperview().inset(16)
         }
     }
 }

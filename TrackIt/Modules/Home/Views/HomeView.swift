@@ -4,6 +4,7 @@ import SnapKit
 final class HomeView: UIView {
     let addHabbitButton = PrimaryButton(title: "Add Habbit")
     let habbitsTableView = HabitsTableView()
+    let customNavigationBar = CustomNavigationBar()
     
     private lazy var gradientLayer = {
         $0.colors = Colors.Gradients.primaryBg
@@ -34,14 +35,18 @@ private extension HomeView {
     }
     
     func setupConstraints() {
-        [habbitsTableView, addHabbitButton].forEach {
+        [customNavigationBar, habbitsTableView, addHabbitButton].forEach {
             addSubview($0)
         }
         
+        customNavigationBar.snp.makeConstraints {
+            $0.top.equalTo(safeTop).inset(8)
+            $0.horizontalEdges.equalToSuperview()
+        }
+        
         habbitsTableView.snp.makeConstraints {
-
+            $0.top.equalTo(customNavigationBar.snp.bottom).offset(24)
             $0.horizontalEdges.equalToSuperview().inset(16)
-            $0.top.equalToSuperview().inset(24)
             $0.bottom.equalTo(addHabbitButton.snp.top).offset(-16)
         }
         
