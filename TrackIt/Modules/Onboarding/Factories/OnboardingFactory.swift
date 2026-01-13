@@ -6,7 +6,7 @@ enum OnboardingFactory {
         return [
             .init(
                 currentIndex: 0,
-                title: "Welcome to Daily Habits Tracker",
+                title: "Welcome to Trackt It",
                 description: "Start your journey to better habits. Track your daily routines and see your progress grow",
                 image: .onb1
             ),

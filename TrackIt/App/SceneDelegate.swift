@@ -6,7 +6,16 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: scene)
-        window.rootViewController = HomeViewController()
+        
+        let storage = UserDefaultsStorage.shared
+        let isOnboardingShown: Bool = storage.get(.isOnboardingShown) ?? false
+        
+        if isOnboardingShown {
+            window.rootViewController = HomeViewController()
+        } else {
+            window.rootViewController = OnboardingViewController()
+        }
+        
         self.window = window
         window.makeKeyAndVisible()
     }
