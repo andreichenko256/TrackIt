@@ -72,3 +72,9 @@ private extension HomeView {
         }
     }
 }
+
+extension HomeView {
+    func handlePremiumStatus(isPremium: Bool) {
+        customNavigationBar.premiumBadge.isPremium = isPremium
+    }
+}

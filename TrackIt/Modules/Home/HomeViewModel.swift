@@ -16,6 +16,15 @@ final class HomeViewModel {
             .eraseToAnyPublisher()
     }
     
+    var isPremiumUser: Bool {
+        return UserDefaultsStorage.shared.get(.isPremiumUser) ?? false
+    }
+    
+    var isPremiumUserPublisher: AnyPublisher<Bool, Never> {
+        Just(isPremiumUser)
+            .eraseToAnyPublisher()
+    }
+    
     private let coreDataManager = CoreDataManager.shared
     
     func loadHabits() {

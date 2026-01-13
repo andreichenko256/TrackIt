@@ -52,3 +52,9 @@ private extension PrimaryButton {
         onTap?()
     }
 }
+
+extension PrimaryButton {
+    func setTitle(_ title: String) {
+        titleLabel.text = title
+    }
+}

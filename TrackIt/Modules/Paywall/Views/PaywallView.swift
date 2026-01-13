@@ -1,5 +1,6 @@
 import UIKit
 import SnapKit
+import StoreKit
 
 final class PaywallView: UIView {
     
@@ -109,5 +110,12 @@ private extension PaywallView {
             $0.bottom.equalTo(safeBottom).inset(32)
             $0.horizontalEdges.equalToSuperview().inset(24)
         }
+    }
+}
+
+extension PaywallView {
+    func configure(with product: Product) {
+        let price = product.displayPrice
+        continueButton.setTitle("Continue for \(price)")
     }
 }

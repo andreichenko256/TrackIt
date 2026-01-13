@@ -124,6 +124,13 @@ private extension HomeViewController {
                 self?.homeView.noHabbitsLabel.isHidden = isEmpty
             }
             .store(in: &cancellables)
+        
+        viewModel.isPremiumUserPublisher
+            .receive(on: RunLoop.main)
+            .sink { [weak self] isPremium in
+                self?.homeView.handlePremiumStatus(isPremium: isPremium)
+            }
+            .store(in: &cancellables)
     }
     
     func setupActions() {

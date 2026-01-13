@@ -3,6 +3,7 @@ import SnapKit
 
 final class CustomNavigationBar: UIView {
     let editMenu = EditMenu()
+    let premiumBadge = PremiumBadge()
     
     private lazy var titleLabel = {
         $0.text = "Track It!"
@@ -29,8 +30,13 @@ private extension CustomNavigationBar {
     }
     
     func setupConstraints() {
-        [titleLabel, editMenu].forEach {
+        [titleLabel, editMenu, premiumBadge].forEach {
             addSubview($0)
+        }
+        
+        premiumBadge.snp.makeConstraints {
+            $0.leading.equalToSuperview().inset(16)
+            $0.verticalEdges.equalToSuperview()
         }
         
         titleLabel.snp.makeConstraints {
