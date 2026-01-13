@@ -1,7 +1,5 @@
 # TrackIt - Daily Habits Tracker
 
-A modern iOS application for tracking daily habits with an intelligent flow management system. Built with Swift, following SOLID principles and clean architecture patterns.
-
 ## 📱 Overview
 
 TrackIt is a utility application that helps users build and maintain daily habits. The app features a clean, intuitive interface for managing habits, with intelligent flow management that adapts to user context and preferences.
@@ -13,7 +11,6 @@ TrackIt is a utility application that helps users build and maintain daily habit
 - **Onboarding Flow**: Smooth 4-screen onboarding experience for new users
 - **Paywall Integration**: Context-aware premium subscription flow
 - **Data Persistence**: CoreData integration for reliable data storage
-- **Modern UI**: Beautiful gradient backgrounds and intuitive navigation
 
 ### Intelligent Flow Management
 The app includes a sophisticated decision engine that determines user flows based on:
@@ -235,12 +232,6 @@ The app uses **Combine** framework for reactive state management:
 - **Combine**: Reactive programming framework
 - **CoreData**: Data persistence
 - **StoreKit**: In-app purchase integration
-
-## 📋 Requirements
-
-- iOS 15.0+
-- Xcode 14.0+
-- Swift 5.7+
 
 ## 🚀 Getting Started
 
