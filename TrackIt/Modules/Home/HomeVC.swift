@@ -130,6 +130,14 @@ private extension HomeViewController {
         homeView.addHabbitButton.onTap = { [weak self] in
             self?.showAddHabitDialog()
         }
+        
+        homeView.customNavigationBar.editMenu.onCompleteAll = { [weak self] in
+            self?.completeAllHabits()
+        }
+        
+        homeView.customNavigationBar.editMenu.onDeleteCompleted = { [weak self] in
+            self?.deleteCompletedHabits()
+        }
     }
     
     func showAddHabitDialog() {
@@ -164,6 +172,26 @@ private extension HomeViewController {
         alert.addAction(UIAlertAction(title: "Save", style: .default) { [weak self, weak alert] _ in
             guard let newTitle = alert?.textFields?.first?.text, !newTitle.isEmpty else { return }
             self?.viewModel.updateHabit(at: indexPath, newTitle: newTitle)
+        })
+        
+        present(alert, animated: true)
+    }
+    
+    func completeAllHabits() {
+        viewModel.completeAllHabits()
+    }
+    
+    func deleteCompletedHabits() {
+        let alert = UIAlertController(
+            title: "Delete Completed",
+            message: "Are you sure you want to delete all completed habits?",
+            preferredStyle: .alert
+        )
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Delete", style: .destructive) { [weak self] _ in
+            guard let self = self else { return }
+            self.viewModel.deleteCompletedHabits()
         })
         
         present(alert, animated: true)

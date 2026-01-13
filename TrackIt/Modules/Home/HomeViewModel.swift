@@ -105,6 +105,29 @@ final class HomeViewModel {
         }
     }
     
+    func completeAllHabits() {
+        for index in habits.indices {
+            if !habits[index].isCompleted {
+                habits[index].isCompleted = true
+                coreDataManager.updateHabit(habits[index])
+            }
+        }
+        groupHabits()
+    }
+    
+    func deleteCompletedHabits() {
+        let completedHabits = habits.filter { $0.isCompleted }
+        
+        guard !completedHabits.isEmpty else { return }
+        
+        for habit in completedHabits {
+            coreDataManager.deleteHabit(withId: habit.id)
+        }
+        
+        habits.removeAll { $0.isCompleted }
+        groupHabits()
+    }
+    
     private func groupHabits() {
         let calendar = Calendar.current
         

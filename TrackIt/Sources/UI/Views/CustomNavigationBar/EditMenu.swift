@@ -2,6 +2,9 @@ import UIKit
 import SnapKit
 
 final class EditMenu: UIView {
+    var onCompleteAll: VoidBlock?
+    var onDeleteCompleted: VoidBlock?
+    
     private lazy var ellipsis = {
         $0.image = UIImage(systemName: "ellipsis")
         $0.contentMode = .scaleAspectFit
@@ -21,13 +24,30 @@ final class EditMenu: UIView {
         return $0
     }(UIView())
     
+    private lazy var menuButton = {
+        $0.showsMenuAsPrimaryAction = true
+        return $0
+    }(UIButton(type: .system))
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
+        updateMenu()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func updateMenu() {
+        menuButton.menu = UIMenu(title: "", children: [
+            UIAction(title: "Complete all", image: UIImage(systemName: "checkmark.circle")) { [weak self] _ in
+                self?.onCompleteAll?()
+            },
+            UIAction(title: "Delete completed", image: UIImage(systemName: "trash"), attributes: .destructive) { [weak self] _ in
+                self?.onDeleteCompleted?()
+            }
+        ])
     }
 }
 
@@ -45,19 +65,8 @@ private extension EditMenu {
             $0.center.equalToSuperview()
         }
         
-        let button = UIButton(type: .system)
-        button.showsMenuAsPrimaryAction = true
-        button.menu = UIMenu(title: "", children: [
-            UIAction(title: "Complete all", image: UIImage(systemName: "checkmark.circle")) { _ in
-                print("Complete all tapped")
-            },
-            UIAction(title: "Delete completed", image: UIImage(systemName: "trash"), attributes: .destructive) { _ in
-                print("Delete tapped")
-            }
-        ])
-        
-        addSubview(button)
-        button.snp.makeConstraints {
+        addSubview(menuButton)
+        menuButton.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
     }
