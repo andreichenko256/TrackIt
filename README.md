@@ -239,7 +239,7 @@ The app uses **Combine** framework for reactive state management:
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone git@github.com:andreichenko256/TrackIt.git
 cd TrackIt
 ```
 
