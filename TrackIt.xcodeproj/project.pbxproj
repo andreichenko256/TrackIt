@@ -26,6 +26,12 @@
 		ED7970A12F15A97C006AFEE5 /* HabitEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7970A02F15A97C006AFEE5 /* HabitEntity+CoreDataClass.swift */; };
 		ED7970A32F15A98F006AFEE5 /* HabitEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7970A22F15A98E006AFEE5 /* HabitEntity+CoreDataProperties.swift */; };
 		ED7970A52F15A9A5006AFEE5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7970A42F15A9A4006AFEE5 /* CoreDataManager.swift */; };
+		ED7970A72F15C8F4006AFEE5 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7970A62F15C8F4006AFEE5 /* PaywallView.swift */; };
+		ED7970AA2F15C9CE006AFEE5 /* BenefitItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7970A92F15C9C9006AFEE5 /* BenefitItemView.swift */; };
+		ED7970AE2F15CD39006AFEE5 /* OnboardingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7970AD2F15CD34006AFEE5 /* OnboardingPageVC.swift */; };
+		ED7970B02F15CD4C006AFEE5 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7970AF2F15CD48006AFEE5 /* OnboardingVC.swift */; };
+		ED7970B22F15CD50006AFEE5 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7970B12F15CD4E006AFEE5 /* OnboardingView.swift */; };
+		ED7970B62F15CD9E006AFEE5 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7970B52F15CD9E006AFEE5 /* PageModel.swift */; };
 		EDA9E0E92F1162DA00A95439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA9E0E22F1162DA00A95439 /* Assets.xcassets */; };
 		EDA9E0EB2F1162DA00A95439 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA9E0E52F1162DA00A95439 /* LaunchScreen.storyboard */; };
 		EDA9E0EC2F1162DA00A95439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9E0E12F1162DA00A95439 /* AppDelegate.swift */; };
@@ -56,6 +62,12 @@
 		ED7970A02F15A97C006AFEE5 /* HabitEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HabitEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		ED7970A22F15A98E006AFEE5 /* HabitEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HabitEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ED7970A42F15A9A4006AFEE5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		ED7970A62F15C8F4006AFEE5 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		ED7970A92F15C9C9006AFEE5 /* BenefitItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitItemView.swift; sourceTree = "<group>"; };
+		ED7970AD2F15CD34006AFEE5 /* OnboardingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageVC.swift; sourceTree = "<group>"; };
+		ED7970AF2F15CD48006AFEE5 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		ED7970B12F15CD4E006AFEE5 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		ED7970B52F15CD9E006AFEE5 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
 		EDA9E0C92F1161DB00A95439 /* TrackIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA9E0E12F1162DA00A95439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDA9E0E22F1162DA00A95439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -188,6 +200,8 @@
 		ED7970992F1595A2006AFEE5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ED7970A82F15C9C5006AFEE5 /* Subviews */,
+				ED7970A62F15C8F4006AFEE5 /* PaywallView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,6 +222,57 @@
 				ED7970A02F15A97C006AFEE5 /* HabitEntity+CoreDataClass.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		ED7970A82F15C9C5006AFEE5 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				ED7970A92F15C9C9006AFEE5 /* BenefitItemView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		ED7970AB2F15CD1E006AFEE5 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				ED7970B72F15CDF9006AFEE5 /* Page */,
+				ED7970B42F15CD86006AFEE5 /* Factories */,
+				ED7970B32F15CD7E006AFEE5 /* Models */,
+				ED7970AF2F15CD48006AFEE5 /* OnboardingVC.swift */,
+				ED7970AD2F15CD34006AFEE5 /* OnboardingPageVC.swift */,
+				ED7970AC2F15CD2A006AFEE5 /* Views */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		ED7970AC2F15CD2A006AFEE5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED7970B12F15CD4E006AFEE5 /* OnboardingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ED7970B32F15CD7E006AFEE5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED7970B52F15CD9E006AFEE5 /* PageModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ED7970B42F15CD86006AFEE5 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		ED7970B72F15CDF9006AFEE5 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Page;
 			sourceTree = "<group>";
 		};
 		EDA9E0C02F1161DB00A95439 = {
@@ -264,6 +329,7 @@
 		EDA9E0F12F11635200A95439 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				ED7970AB2F15CD1E006AFEE5 /* Onboarding */,
 				ED7970962F159597006AFEE5 /* Paywall */,
 				ED79706F2F1508DA006AFEE5 /* Home */,
 				EDA9E0F52F1165DB00A95439 /* Launch */,
@@ -390,16 +456,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED7970B22F15CD50006AFEE5 /* OnboardingView.swift in Sources */,
 				EDA9E0EC2F1162DA00A95439 /* AppDelegate.swift in Sources */,
 				ED7970902F158FB9006AFEE5 /* HabitsTableHeaderView.swift in Sources */,
 				ED7970872F15822E006AFEE5 /* HabitsTableView.swift in Sources */,
+				ED7970AE2F15CD39006AFEE5 /* OnboardingPageVC.swift in Sources */,
 				ED79708E2F1583D0006AFEE5 /* HomeViewModel.swift in Sources */,
+				ED7970B62F15CD9E006AFEE5 /* PageModel.swift in Sources */,
 				ED79709D2F15A7F7006AFEE5 /* HabitDataModel.xcdatamodeld in Sources */,
+				ED7970AA2F15C9CE006AFEE5 /* BenefitItemView.swift in Sources */,
 				ED79707B2F157DEE006AFEE5 /* Colors.swift in Sources */,
+				ED7970A72F15C8F4006AFEE5 /* PaywallView.swift in Sources */,
 				ED7970A52F15A9A5006AFEE5 /* CoreDataManager.swift in Sources */,
 				ED7970982F1595A0006AFEE5 /* PaywallVC.swift in Sources */,
 				ED7970812F1580AD006AFEE5 /* UIView.swift in Sources */,
 				ED7970892F15829F006AFEE5 /* HabitCell.swift in Sources */,
+				ED7970B02F15CD4C006AFEE5 /* OnboardingVC.swift in Sources */,
 				ED7970A12F15A97C006AFEE5 /* HabitEntity+CoreDataClass.swift in Sources */,
 				ED7970712F1508E0006AFEE5 /* HomeVC.swift in Sources */,
 				ED79708C2F1582D9006AFEE5 /* Habit.swift in Sources */,
