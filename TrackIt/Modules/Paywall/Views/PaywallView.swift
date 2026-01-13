@@ -30,7 +30,7 @@ final class PaywallView: UIView {
         remindersBenefit
     ]))
     
-    private lazy var titleLabel: UILabel = {
+    lazy var titleLabel: UILabel = {
         let fullText = "Get more with\nTrack It Pro"
         let highlightedText = "Track It Pro"
         
@@ -117,5 +117,16 @@ extension PaywallView {
     func configure(with product: Product) {
         let price = product.displayPrice
         continueButton.setTitle("Continue for \(price)")
+    }
+    
+    func configureWithAlternativeContent(_ content: AlternativeContent) {
+        titleLabel.attributedText = NSAttributedString(
+            string: content.headline,
+            attributes: [
+                .font: UIFont.systemFont(ofSize: 34, weight: .bold),
+                .foregroundColor: UIColor.label
+            ]
+        )
+        continueButton.setTitle(content.ctaText)
     }
 }

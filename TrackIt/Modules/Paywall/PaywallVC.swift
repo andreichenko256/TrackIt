@@ -5,6 +5,7 @@ import Combine
 final class PaywallViewController: UIViewController {
     private let viewModel = PaywallViewModel()
     private var cancellables = Set<AnyCancellable>()
+    private var alternativeContent: AlternativeContent?
     
     private var paywallView: PaywallView {
         return view as! PaywallView
@@ -15,10 +16,18 @@ final class PaywallViewController: UIViewController {
         setupActions()
         bindViewModel()
         viewModel.load()
+        
+        if let alternativeContent = alternativeContent {
+            paywallView.configureWithAlternativeContent(alternativeContent)
+        }
     }
     
     override func loadView() {
         view = PaywallView()
+    }
+    
+    func configureWithAlternativeContent(_ content: AlternativeContent) {
+        alternativeContent = content
     }
 }
 

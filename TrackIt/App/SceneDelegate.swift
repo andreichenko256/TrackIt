@@ -8,6 +8,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: scene)
         
         let storage = UserDefaultsStorage.shared
+        
         let isOnboardingShown: Bool = storage.get(.isOnboardingShown) ?? false
         
         if isOnboardingShown {
@@ -20,4 +21,3 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.makeKeyAndVisible()
     }
 }
-

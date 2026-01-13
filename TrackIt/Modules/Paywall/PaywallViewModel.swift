@@ -17,7 +17,6 @@ final class PaywallViewModel {
         purchaseService.loadProducts(ids: ["premium_month"])
     }
 
-    // New buy with completion
     func buy(completion: @escaping (Result<Bool, Error>) -> Void) {
         guard let product = products.first else {
             print("❌ No product loaded yet")
@@ -60,7 +59,6 @@ final class PaywallViewModel {
             .store(in: &cancellables)
     }
 
-    // MARK: - Helpers
     private func checkVerified<T>(_ result: VerificationResult<T>) throws -> T {
         switch result {
         case .verified(let safe):

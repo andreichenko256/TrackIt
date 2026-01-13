@@ -141,14 +141,40 @@ private extension OnboardingViewController {
     }
     
     func finishOnboarding() {
-        storage.set(true, for: .isOnboardingShown)
-        
         guard let windowScene = view.window?.windowScene,
               let window = windowScene.windows.first else {
             return
         }
         
-        window.rootViewController = HomeViewController()
-        window.makeKeyAndVisible()
+        let context = UserContext.current()
+        let decisionResult = DecisionEngine.shared.determineFlow(for: context)
+        
+        storage.set(true, for: .isOnboardingShown)
+        UserContext.markAppLaunched()
+        
+        let homeVC = HomeViewController()
+        
+        switch decisionResult.flowType {
+        case .showPaywall:
+            window.rootViewController = homeVC
+            window.makeKeyAndVisible()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                let paywallVC = PaywallViewController()
+                paywallVC.modalPresentationStyle = .fullScreen
+                homeVC.present(paywallVC, animated: true)
+            }
+        case .skipPaywall:
+            window.rootViewController = homeVC
+            window.makeKeyAndVisible()
+        case .alternativeContent(let content):
+            window.rootViewController = homeVC
+            window.makeKeyAndVisible()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                let paywallVC = PaywallViewController()
+                paywallVC.configureWithAlternativeContent(content)
+                paywallVC.modalPresentationStyle = .fullScreen
+                homeVC.present(paywallVC, animated: true)
+            }
+        }
     }
 }

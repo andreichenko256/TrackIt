@@ -21,6 +21,12 @@ final class HomeViewController: UIViewController {
     override func loadView() {
         view = HomeView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let isPremium = viewModel.isPremiumUser
+        homeView.handlePremiumStatus(isPremium: isPremium)
+    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {

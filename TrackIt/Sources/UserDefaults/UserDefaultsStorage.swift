@@ -26,4 +26,5 @@ final class UserDefaultsStorage: UserDefaultsStoring {
 enum UserDefaultsKey: String {
     case isOnboardingShown
     case isPremiumUser
+    case isAppFirstLaunch
 }
